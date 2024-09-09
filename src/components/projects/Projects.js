@@ -28,7 +28,7 @@ function Projects() {
               imgPath={tex}
               isBlog={false}
               isWIP={true}
-              title="TEX2Speech"
+              title="Speech2TeX"
               description="A tool used for converting spoken equations into their LaTeX equivalent using DeepSpeech for speech recognition and GPT for Natural Language Processing."
               ghLink="https://github.com/MichaelATham/tex2speech"
               // demoLink="https://chatify-49.web.app/"
