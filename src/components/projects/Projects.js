@@ -10,6 +10,7 @@ import Particle from "../Particle";
 // import bitsOfCode from "../../Assets/Projects/blog.png";
 import logo from "../../assets/logo.png";
 import tex from "../../assets/texwhite.svg";
+import uw from "../../assets/uw.png";
 
 function Projects() {
   return (
@@ -27,11 +28,23 @@ function Projects() {
             <ProjectCard
               imgPath={tex}
               isBlog={false}
+              hasGithub={false}
               isWIP={true}
               title="Speech2TeX"
               description="A tool used for converting spoken equations into their LaTeX equivalent using DeepSpeech for speech recognition and GPT for Natural Language Processing."
               ghLink="https://github.com/MichaelATham/tex2speech"
               // demoLink="https://chatify-49.web.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={uw}
+              isBlog={false}
+              hasGithub={false}
+              isRestricted={true}
+              title="Simple Real-Time Operating System"
+              description="A university project that incorporates context switching, inter-process communication (IPC) via shared memory, and an Earliest Deadline First (EDF) scheduling algorithm. Optimized task management for real-time performance, ensuring precise scheduling and resource sharing in a time-constrained environment."
             />
           </Col>
 

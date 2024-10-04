@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { MdConstruction } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
+import { CiMail } from "react-icons/ci";
 
 function ProjectCards(props) {
   return (
@@ -14,7 +15,7 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank" hidden={props.isWIP}>
+        <Button variant="primary" href={props.ghLink} target="_blank" hidden={!props.hasGithub}>
           <BsGithub /> &nbsp;
           {props.isBlog ? "Blog" : "GitHub"}
         </Button>
@@ -46,6 +47,20 @@ function ProjectCards(props) {
             <MdConstruction /> &nbsp;
             {"Under Construction"} &nbsp;
             <MdConstruction /> 
+          </Button>
+        )}
+
+        {props.isRestricted && (
+            <Button
+            variant="primary"
+            disabled={false}
+            href="mailto:m3tham@uwaterloo.ca?subject=ECE350%20RTOS%20Project%20Inquiry&body=Hi%20Michael!"
+            target="_blank"
+            style={{ marginLeft: "10px" }}
+          >
+            <CiMail /> &nbsp;
+            {"Learn more"} &nbsp;
+            <CiMail /> 
           </Button>
         )}
       </Card.Body>
