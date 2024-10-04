@@ -21,7 +21,7 @@ function Home() {
     // Set a timeout to load AltHome after Home has rendered
     const timer = setTimeout(() => {
       setShowAltHome(true);
-    }, 3000); // Adjust the timeout duration as needed (2000ms = 2 seconds)
+    }, 1000); // Adjust the timeout duration as needed (2000ms = 2 seconds)
 
     // Cleanup timeout on component unmount
     return () => clearTimeout(timer);
@@ -52,8 +52,13 @@ function Home() {
         </Container>
         <div class="scroll-down"></div>
       </Container>
-      {showAltHome && <AltHome />}
+      <section>
+        <Container>
+          {showAltHome && <AltHome />}
+        </Container>
+      </section>
     </section>
+    
   );
 }
 
