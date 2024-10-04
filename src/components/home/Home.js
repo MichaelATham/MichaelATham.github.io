@@ -21,7 +21,7 @@ function Home() {
     // Set a timeout to load AltHome after Home has rendered
     const timer = setTimeout(() => {
       setShowAltHome(true);
-    }, 2000); // Adjust the timeout duration as needed (2000ms = 2 seconds)
+    }, 3000); // Adjust the timeout duration as needed (2000ms = 2 seconds)
 
     // Cleanup timeout on component unmount
     return () => clearTimeout(timer);
