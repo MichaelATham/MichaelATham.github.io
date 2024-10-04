@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import AltHome from "./AltHome";
@@ -13,6 +13,18 @@ function Home() {
     document.documentElement.style.setProperty('--initial-width', `${initialWidth}px`);
     document.documentElement.style.setProperty('--initial-height', `${initialHeight}px`);
     document.documentElement.style.setProperty('--bottom-offset', `${bottomOffset}px`);
+  }, []);
+
+  const [showAltHome, setShowAltHome] = useState(false);
+
+  useEffect(() => {
+    // Set a timeout to load AltHome after Home has rendered
+    const timer = setTimeout(() => {
+      setShowAltHome(true);
+    }, 2000); // Adjust the timeout duration as needed (2000ms = 2 seconds)
+
+    // Cleanup timeout on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -40,7 +52,7 @@ function Home() {
         </Container>
         <div class="scroll-down"></div>
       </Container>
-      <AltHome />
+      {showAltHome && <AltHome />}
     </section>
   );
 }
