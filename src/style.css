@@ -6,6 +6,10 @@
   color: #90a2ff
 }
 
+.lighter-blue {
+  color: #90a2ff
+}
+
 html {
 --section-background-color: linear-gradient(
     to bottom left,
@@ -156,10 +160,14 @@ button:focus {
 }
   
 .home-about-section {
-    position: relative;
+    position: relative !important;
     padding-bottom: 70px !important;
     padding-top: 70px !important;
     
+}
+
+.alt-home-section {
+  margin-top: 10px;
 }
   
 .home-about-description {
@@ -348,7 +356,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #554ff7 !important;
+  color: #90a2ff !important;
 }
 
 /* ~~~~~~~~~~~~ */

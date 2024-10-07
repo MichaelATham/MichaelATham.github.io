@@ -6,31 +6,26 @@ import TypeEffect from "./TypeEffect";
 
 function Home() {
   useEffect(() => {
-    const initialWidth = window.outerWidth;
-    const initialHeight = window.outerHeight;
-    const bottomOffset = initialHeight / 15;
+    const initialWidthMain = window.outerWidth;
+    const initialHeightMain = window.outerHeight;
+    const bottomOffset = initialHeightMain / 15;
 
-    document.documentElement.style.setProperty('--initial-width', `${initialWidth}px`);
-    document.documentElement.style.setProperty('--initial-height', `${initialHeight}px`);
+    document.documentElement.style.setProperty('--initial-width', `${initialWidthMain}px`);
+    document.documentElement.style.setProperty('--initial-height', `${initialHeightMain}px`);
     document.documentElement.style.setProperty('--bottom-offset', `${bottomOffset}px`);
-  }, []);
 
-  const [showAltHome, setShowAltHome] = useState(false);
+    const initialWidthAlt = window.outerWidth;
+    const initialHeightAlt = window.outerHeight;
+    document.documentElement.style.setProperty('--initial-width-alt', `${initialWidthAlt}px`);
+    document.documentElement.style.setProperty('--initial-height-alt', `${initialHeightAlt}px`);
 
-  useEffect(() => {
-    // Set a timeout to load AltHome after Home has rendered
-    const timer = setTimeout(() => {
-      setShowAltHome(true);
-    }, 1000); // Adjust the timeout duration as needed (2000ms = 2 seconds)
-
-    // Cleanup timeout on component unmount
-    return () => clearTimeout(timer);
   }, []);
 
   return (
     <section>
+      <Particle />
       <Container fluid className="home-section" id="home">
-        <Particle />
+        
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
@@ -49,14 +44,13 @@ function Home() {
               </div>
             </Col>
           </Row>
+          <div class="scroll-down"></div>
         </Container>
-        <div class="scroll-down"></div>
+        
       </Container>
-      <section>
-        <Container>
-          {showAltHome && <AltHome />}
+        <Container class="alt-home-section">
+          <AltHome />
         </Container>
-      </section>
     </section>
     
   );

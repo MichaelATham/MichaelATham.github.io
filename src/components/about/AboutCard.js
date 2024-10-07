@@ -38,7 +38,7 @@ function AboutCard() {
               <RxHeart /> Seeing Friends/Family 🤝🏻
             </li>
             <li className="about-activity">
-              <RxHeart /> Playing with my Dog 🐶
+              <RxHeart /> Playing with my dog Kenzo 🐶
             </li>
             <li className="about-activity">
               <RxHeart /> Playing Games 🎮
@@ -47,14 +47,16 @@ function AboutCard() {
               <RxHeart /> Traveling ✈️
             </li>
             <li className="about-activity">
-              <RxHeart /> Sports & the Gym 🎾🏌🏼‍♂️🏃🏻‍♂️🏋🏻‍♂️
+              <RxHeart /> Sports & Personal Fitness 🎾
             </li>
           </ul>
 
-          <p className="light-blue">
-          "Every journey begins with a single step." {" "}
+          <p className="white">
+          "No matter how difficult the path may be, every journey starts with a single step." {" "}
           </p>
-          <footer className="blockquote-footer">Me!</footer>
+          <footer className="blockquote-footer">
+            {/* Me! */}
+          </footer>
         </blockquote>
       </Card.Body>
     </Card>
