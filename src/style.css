@@ -169,6 +169,7 @@ button:focus {
 .alt-home-section {
   display: flex;
   margin-top: 10px;
+  position: relative;
 }
   
 .home-about-description {
