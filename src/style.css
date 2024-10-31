@@ -113,7 +113,7 @@ button:focus {
     background-repeat: no-repeat;
     padding-bottom: 30px !important;
     padding-top: 30px !important;
-    overflow: hidden; /* Ensures it doesn't extend */
+    /* overflow: hidden;  */
     z-index: -1;
 }
   
