@@ -18,41 +18,38 @@ function Home() {
     const initialHeightAlt = window.outerHeight;
     document.documentElement.style.setProperty('--initial-width-alt', `${initialWidthAlt}px`);
     document.documentElement.style.setProperty('--initial-height-alt', `${initialHeightAlt}px`);
-
   }, []);
 
   return (
     <section>
-      <Particle />
-      <Container fluid className="home-section" id="home">
-        
-        <Container className="home-content">
+      <div className="home-section">
+        <Particle />
+        <Container fluid className="home-content" id="home">
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hey There! {" "}
                 <span className="wave" role="img" aria-labelledby="wave">
-                    👋🏼
+                  👋🏼
                 </span>
               </h1>
-
-              <h1 className="heading-name"> I'M <strong className="main-name"> MICHAEL THAM</strong>
+              <h1 className="heading-name">
+                I'M <strong className="main-name">MICHAEL THAM</strong>
               </h1>
-
               <div style={{ padding: 50, paddingTop: 25, textAlign: "left" }}>
                 <TypeEffect />
               </div>
             </Col>
           </Row>
-          <div class="scroll-down"></div>
+          <div className="scroll-down"></div>
         </Container>
-        
-      </Container>
-        <Container class="alt-home-section">
+      </div>
+      <div className="alt-home-section">
+        <Container>
           <AltHome />
         </Container>
+      </div>
     </section>
-    
   );
 }
 
