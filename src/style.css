@@ -108,12 +108,12 @@ button:focus {
   
 .home-section {
     position: relative;
-    z-index: -1;
     width: var(--initial-width);
     height: var(--initial-height);
     background-repeat: no-repeat;
     padding-bottom: 30px !important;
     padding-top: 30px !important;
+    /* z-index: -1; */
 }
   
 .home-content {
@@ -167,6 +167,7 @@ button:focus {
 }
 
 .alt-home-section {
+  display: flex;
   margin-top: 10px;
 }
   

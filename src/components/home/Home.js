@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import AltHome from "./AltHome";
