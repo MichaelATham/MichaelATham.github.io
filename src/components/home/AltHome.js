@@ -6,12 +6,10 @@ import {
   AiFillMail
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import Particle from '../Particle';
 
 function AltHome() {
   return (
     <Container fluid className="home-about-section" id="about">
-        <Particle />
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
@@ -28,11 +26,11 @@ function AltHome() {
               , honed through both professional and academic experiences.
               <br />
               <br />
-              My field of Interest's are in areas such as&nbsp;
-                <b className="blue">Back-end Development, Cloud Computing </b> 
-              and also in areas related to{" "}
+              Currently, I've been diving deep into the world of&nbsp;
+                <b className="blue">Back-end Development, Cloud Computing, Cybersecurity, </b> 
+                  and {" "}
                 <b className="blue">
-                  Cybersecurity, Artificial Intelligence.
+                  Artificial Intelligence/Machine Learning 
                 </b>
               <br />
               <br />

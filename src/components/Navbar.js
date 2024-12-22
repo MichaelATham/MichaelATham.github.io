@@ -10,8 +10,8 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
+import { FiUserPlus } from "react-icons/fi";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -69,7 +69,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/project"
+                to="/projects"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
@@ -89,6 +89,16 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            {/* <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/connect"
+                onClick={() => updateExpanded(false)}
+              >
+                <FiUserPlus style={{ marginBottom: "2px" }} />  Connect
+              </Nav.Link>
+            </Nav.Item> */}
+
             <Nav.Item>
               <Nav.Link
                 href="https://michaelandrewtham.medium.com/"
@@ -98,7 +108,6 @@ function NavBar() {
                 <ImBlog style={{ marginBottom: "2px" }} /> Medium
               </Nav.Link>
             </Nav.Item>
-
           </Nav>
         </Navbar.Collapse>
       </Container>

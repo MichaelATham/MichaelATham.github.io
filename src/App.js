@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/about/About";
 import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
+import Connect from "./components/connect/Connect";
 import {
   BrowserRouter as Router,
   Route,
@@ -39,7 +40,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/project" element={<Projects />} />
+          <Route path="/projects" element={<Projects />} />
+          {/* <Route path="/connect" element={<Connect />} /> */}
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

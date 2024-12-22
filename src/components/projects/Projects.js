@@ -2,13 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-// import leaf from "../../Assets/Projects/leaf.png";
-// import emotion from "../../Assets/Projects/emotion.png";
-// import editor from "../../Assets/Projects/codeEditor.png";
-// import chatify from "../../Assets/Projects/chatify.png";
-// import suicide from "../../Assets/Projects/suicide.png";
-// import bitsOfCode from "../../Assets/Projects/blog.png";
-import logo from "../../assets/logo.png";
 import tex from "../../assets/texwhite.svg";
 import uw from "../../assets/uw.png";
 
@@ -31,7 +24,7 @@ function Projects() {
               hasGithub={false}
               isWIP={true}
               title="Speech2TeX"
-              description="A tool used for converting spoken equations into their LaTeX equivalent using DeepSpeech for speech recognition and GPT for Natural Language Processing."
+              description="A tool used for converting spoken equations into their LaTeX equivalent using OpenAI's Whisper for speech recognition and a fine-tuned Google FLAN model for Natural Language Processing."
               ghLink="https://github.com/MichaelATham/tex2speech"
               // demoLink="https://chatify-49.web.app/"
             />
