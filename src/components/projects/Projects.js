@@ -14,7 +14,7 @@ function Projects() {
           My Recent <strong className="blue">Work</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Feel free to browse the projects I've worked on!
+          Feel free to browse my past internships and projects I've worked on!
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
@@ -34,10 +34,47 @@ function Projects() {
             <ProjectCard
               imgPath={uw}
               isBlog={false}
-              hasGithub={false}
-              isRestricted={true}
+              hasGithub={true}
+              isRestricted={false}
               title="Simple Real-Time Operating System"
               description="A university project that incorporates context switching, inter-process communication (IPC) via shared memory, and an Earliest Deadline First (EDF) scheduling algorithm. Optimized task management for real-time performance, ensuring precise scheduling and resource sharing in a time-constrained environment."
+              ghLink="https://github.com/MichaelATham/ece350-lab"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={uw}
+              isBlog={false}
+              hasGithub={true}
+              isRestricted={false}
+              title="VHDL Equation Compiler and Interpreter"
+              description="Implemented a series of labs focused on building a compiler and interpreter for VHDL equations. Key features include a recursive descent parser for syntax recognition, the use of polymorphism for flexible design, hashing for efficient symbol management, desugaring for simplification, and elaboration for processing. The Visitor Pattern was applied to facilitate the translation of VHDL equations into functional Java code in a modular and maintainable manner."
+              ghLink="https://github.com/MichaelATham/ece351-labs"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={uw}
+              isBlog={false}
+              hasGithub={true}
+              isRestricted={false}
+              title="Client-DNS Server and Webserver Simulation"
+              description="Developed a Python-based simulation of the interaction between a client machine and a DNS server. The client can query the server’s records to retrieve the IP address associated with a given domain. Additionally, implemented a webserver that utilizes a TCP socket to listen for and handle incoming requests. The repository includes an example Postman collection to demonstrate and test functionality."
+              ghLink="https://github.com/MichaelATham/ece358-labs"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={uw}
+              isBlog={false}
+              hasGithub={true}
+              isRestricted={false}
+              title="Baseball Hall of Fame Predictor"
+              description="Built a Python-based prediction tool leveraging the Lahman Baseball Database (1871–2023) to forecast which players are likely to be nominated and inducted into the Baseball Hall of Fame. The project utilized SQL for feature selection and data cleansing, ensuring the input dataset was optimized for analysis. A decision tree classifier was employed, fine-tuned for a balance of accuracy and precision, achieving an 80% success rate in predicting Hall of Fame outcomes. This tool provides insights into candidate nomination and induction based on historical player data."
+              ghLink="https://github.com/MichaelATham/ece356-labs"
             />
           </Col>
 

@@ -63,6 +63,20 @@ function ProjectCards(props) {
             <CiMail /> 
           </Button>
         )}
+
+      {props.isRestricted && (
+            <Button
+            variant="primary"
+            disabled={false}
+            href="mailto:m3tham@uwaterloo.ca?subject=ECE350%20RTOS%20Project%20Inquiry&body=Hi%20Michael!"
+            target="_blank"
+            style={{ marginLeft: "10px" }}
+          >
+            <CiMail /> &nbsp;
+            {"Learn more"} &nbsp;
+            <CiMail /> 
+          </Button>
+        )}
       </Card.Body>
     </Card>
   );
